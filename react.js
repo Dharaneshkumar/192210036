@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ActivityIndicator } from 'react-native';
 
-const API_BASE_URL = 'http://localhost:9876';
+const API_BASE_URL = 'http://192.168.1.100:9876';
 const WINDOW_SIZE = 10;
 
 const NumberType = {
@@ -60,7 +60,7 @@ const AverageCalculator = () => {
 
             <View style={styles.buttonContainer}>
                 <TouchableOpacity
-                 style={[StyleSheet.button, numberType === NumberType.PRIME && StyleSheet.activeButton]}
+                 style={[styles.button, numberType === NumberType.PRIME && StyleSheet.activeButton]}
                  onPress={() => handleNumberTypeChange(NumberType.PRIME)}
                  >
                     <Text style={StyleSheet.buttonText}>Prime Numbers</Text>
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 20,
-        textAlign: 'centre',
+        textAlign: 'center',
     },
     buttonContainer: {
         flexDirection: 'row',
