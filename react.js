@@ -58,7 +58,7 @@ const AverageCalculator = () => {
         <View style={styles.container}>
             <Text style={styles.title}>Average Calculator Microservice</Text>
 
-            <view style={styles.buttonContainer}>
+            <View style={styles.buttonContainer}>
                 <TouchableOpacity
                  style={[StyleSheet.button, numberType === NumberType.PRIME && StyleSheet.activeButton]}
                  onPress={() => handleNumberTypeChange(NumberType.PRIME)}
@@ -86,7 +86,7 @@ const AverageCalculator = () => {
                  >
                     <Text style={StyleSheet.buttonText}>Random Numbers</Text>
                  </TouchableOpacity>
-            </view>
+            </View>
 
             {loading ? (
                 <ActivityIndicator size="large" color="#0000ff" />
